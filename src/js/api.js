@@ -51,8 +51,16 @@ class Api {
         
     }
 
-    static async cadastrarCliente(data){
-
+    static async cadastrarCliente(body){
+        const cliente = await fetch("https://atividade-api-clientes.herokuapp.com/clientes", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: body
+          })
+          .then(res => res.json())
+          .catch(err => console.log(err))
+      
+          return cliente
     }
 
     static async editarCliente(id, data){
@@ -64,7 +72,6 @@ class Api {
     }
 
 }
-
-Api.listarClientes()
   
 export {Api}
+
