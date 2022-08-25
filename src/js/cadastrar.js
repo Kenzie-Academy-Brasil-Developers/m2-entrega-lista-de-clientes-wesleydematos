@@ -36,7 +36,6 @@ class Cadastrar {
             }
         }
         
-        console.log(JSON.stringify(body))
         Api.cadastrarCliente(JSON.stringify(body))
 
         })
