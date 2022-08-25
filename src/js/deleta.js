@@ -30,7 +30,8 @@ class Deletar {
                 }
             })
 
-            console.log(select)
+        console.log(select.id)
+           Api.deletarCliente(select.id)
         })
     }
 }
