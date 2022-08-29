@@ -90,7 +90,12 @@ class Editar {
         })
 
         Api.editarCliente(idCliente, body)
-
+        if(idCliente > 6){
+            alert('Usuário editado!')
+            window.location.assign('../../index.html')
+        }else if(idCliente <= 6){
+            alert('Impossível deletar esse usuário!')
+        }
         })
     }
 }

@@ -31,7 +31,16 @@ class Deletar {
             })
 
            Api.deletarCliente(select.id)
+
+           if(select.id > 6){
+            alert('Usuário deletado!')
+            window.location.assign('../../index.html')
+           }
+           else if(select.id <= 6){
+            alert('impossível deletar este cliente!')
+           }
         })
+
     }
 }
 

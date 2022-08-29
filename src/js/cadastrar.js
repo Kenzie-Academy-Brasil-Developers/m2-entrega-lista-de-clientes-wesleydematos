@@ -37,6 +37,12 @@ class Cadastrar {
         }
         
         Api.cadastrarCliente(JSON.stringify(body))
+        if(cpf.value.length != 11){
+            alert('CPF inválido, insira 11 caracteres')
+        }else{
+            alert('Usuário criado!')
+            window.location.assign('../../index.html')
+        }
 
         })
     }
